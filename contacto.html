@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!-- Indica al navegador que el documento está escrito en HTML5 -->
+
+<html lang="es">
+<!-- Elemento raíz del documento HTML. 
+     El atributo lang="es" indica que el contenido está en español -->
+
+<head>
+    <!-- Contiene metadatos e información de configuración del documento -->
+
+    <meta charset="UTF-8">
+    <!-- Define la codificación de caracteres como UTF-8 
+     (permite usar tildes, ñ, símbolos especiales, etc.) -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hace que el diseño sea responsivo.
+     width=device-width: ajusta el ancho al dispositivo
+     initial-scale=1.0: establece el zoom inicial -->
+
+    <title>Menú Moderno Responsivo</title>
+    <!-- Título de la página que aparece en la pestaña del navegador -->
+     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Enlaza un archivo CSS externo llamado style.css 
+     donde se definen los estilos del diseño -->
+
+</head>
+<!-- Fin de la sección head -->
+
+<body>
+    <!-- Contiene todo el contenido visible de la página -->
+
+    <header class="header">
+        <!-- Sección de encabezado de la página.
+     La clase "header" permite aplicarle estilos desde CSS -->
+
+        <nav class="navbar">
+            <!-- Define una sección de navegación.
+     Clase "navbar" usada para estilizar la barra de navegación -->
+
+            <a href="index.html" class="logo">MiLogo</a>
+            <!-- Enlace que funciona como logo.
+     href="#" hace que no redirija a ninguna página.
+     Clase "logo" para estilos personalizados -->
+
+            <ul class="nav-menu">
+                <!-- Lista desordenada que contiene los elementos del menú.
+     Clase "nav-menu" para aplicar estilos -->
+
+                <li class="nav-item">
+                    <!-- Elemento de la lista (cada opción del menú).
+     Clase "nav-item" para estilos -->
+
+                    <a href="index.html" class="nav-link">Inicio</a>
+                    <!-- Enlace dentro del menú.
+     Clase "nav-link" para estilos individuales -->
+
+                </li>
+
+                <li class="nav-item">
+                    <a href="servicios.html" class="nav-link">Servicios</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="portafolio.html" class="nav-link">Portafolio</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="contacto.html" class="nav-link">Contacto</a>
+                </li>
+                <!-- Cada bloque <li> representa una opción diferente del menú -->
+
+            </ul>
+            <!-- Fin de la lista del menú -->
+
+            <div class="hamburger">
+                <!-- Contenedor del ícono tipo "hamburguesa" 
+     (usado en diseño responsivo para móviles) -->
+
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <!-- Cada <span> representa una línea del ícono hamburguesa.
+     Se estilizan con CSS para verse como tres barras horizontales -->
+
+            </div>
+            <!-- Fin del botón hamburguesa -->
+
+        </nav>
+        <!-- Fin de la barra de navegación -->
+
+    </header>
+    <!-- Fin del encabezado -->
+     <h1>Esta es la pagin de CONTACTO</h1>
+
+
+     <!-- ========================== -->
+    <!-- NUEVO: Footer pegado al fondo de la pantalla -->
+    <!-- Contiene: copyright, enlaces rápidos y redes sociales -->
+    <!-- ========================== -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Columna izquierda: marca y descripción -->
+            <div class="footer-brand">
+                <span class="footer-logo">MiLogo</span>
+                <p class="footer-desc">Creando experiencias digitales únicas y modernas.</p>
+            </div>
+
+            <!-- Columna central: enlaces rápidos -->
+            <div class="footer-links">
+                <h4 class="footer-title">Navegación</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="portafolio.html">Portafolio</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna derecha: información de contacto -->
+            <div class="footer-contact">
+                <h4 class="footer-title">Contacto</h4>
+                <p>info@milogo.com</p>
+                <p>+34 600 000 000</p>
+            </div>
+
+        </div>
+
+        <!-- Barra inferior con copyright -->
+
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 MiLogo. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <!-- FIN NUEVO: Footer -->
+
+
+    <script src="script.js"></script>
+    <!-- Enlaza un archivo JavaScript externo llamado script.js
+     que normalmente controla la interacción del menú (abrir/cerrar) -->
+
+</body>
+<!-- Fin del contenido visible -->
+
+</html>
+<!-- Fin del documento HTML -->

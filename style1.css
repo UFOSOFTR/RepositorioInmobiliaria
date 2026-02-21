@@ -1,0 +1,291 @@
+/* Reset básico para limpiar márgenes del navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 
+Selector universal (*) aplica estilos a TODOS los elementos.
+margin: 0;      → Elimina márgenes por defecto del navegador.
+padding: 0;     → Elimina rellenos internos por defecto.
+box-sizing: border-box; → Hace que width y height incluyan padding y border,
+                          facilitando el control de tamaños.
+*/
+
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*
+Define la tipografía global del documento.
+Si 'Segoe UI' no está disponible, usa las siguientes opciones.
+*/
+
+.header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 0 1.5rem;
+}
+
+/*
+.header → contenedor superior.
+background-color → color azul oscuro.
+color: white → texto blanco.
+padding: 0 1.5rem → espacio interno horizontal (izq y der).
+*/
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+/*
+display: flex → activa Flexbox.
+justify-content: space-between → separa logo y menú a los extremos.
+align-items: center → centra verticalmente.
+height: 70px → altura fija de la barra.
+*/
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+/*
+font-size: 1.5rem → tamaño relativo al root.
+font-weight: bold → texto en negrita.
+color: #fff → blanco.
+text-decoration: none → quita subrayado del enlace.
+*/
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+/*
+display: flex → elementos en línea horizontal.
+list-style: none → elimina viñetas.
+gap: 2rem → espacio entre elementos del menú.
+*/
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/*
+Define estilo de los enlaces.
+transition: 0.3s → anima cambios (como hover).
+*/
+
+.nav-link:hover {
+    color: #3498db;
+}
+
+/*
+Cuando el mouse pasa encima,
+cambia el color a azul claro.
+*/
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+/*
+display: none → oculto por defecto (en escritorio).
+cursor: pointer → muestra la mano al pasar el mouse.
+*/
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: white;
+    transition: 0.3s;
+}
+
+/*
+Cada barra del icono hamburguesa.
+width: 25px → ancho.
+height: 3px → grosor.
+margin: 5px auto → espacio vertical entre barras y centrado.
+background-color: white → color blanco.
+transition: 0.3s → animaciones suaves.
+*/
+
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    margin-top: auto;
+    display: flex;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem;
+}
+
+.footer-logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white;
+}
+
+.footer-desc {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    max-width: 220px;
+
+}
+
+.footer-title {
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.footer.links ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+
+.footer-links a {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 0.9rem;
+
+}
+
+.footer-links a:hover {
+    color: #3498db;
+}
+
+
+
+.footer-contact p {
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+
+}
+
+.footer-bottom {
+
+    border-top: 1px solid #3498db;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    font-size: 0.8rem;
+    color: #2c3e50;
+}
+
+
+
+
+
+
+
+/* Responsividad: Pantallas móviles */
+/*
+Media query.
+Se activa cuando la pantalla es menor o igual a 768px.
+*/
+@media (max-width: 768px) {
+
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: content;    
+    }
+
+
+
+    .footer-desc {
+        max-width: 100%;
+    }
+
+
+
+
+
+
+    .hamburger {
+        display: block;
+    }
+
+    /*
+En móviles el botón hamburguesa se muestra.
+*/
+
+
+
+    /* Transformamos el menú en una columna lateral o desplegable */
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: #2c3e50;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    /*
+position: fixed → fijo respecto a la pantalla.
+left: -100% → lo mueve fuera de la pantalla (oculto).
+top: 70px → debajo del navbar.
+flex-direction: column → menú vertical.
+width: 100% → ocupa todo el ancho.
+text-align: center → centra texto.
+transition: 0.3s → animación al aparecer.
+box-shadow → sombra ligera.
+*/
+
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    /*
+Cuando el JS agrega la clase "active",
+el menú se mueve a left: 0 (visible).
+*/
+
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    /*
+Espacio vertical entre opciones del menú en móvil.
+*/
+
+
+}
+
+/* Fin del media query */

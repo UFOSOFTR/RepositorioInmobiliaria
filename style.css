@@ -1,0 +1,198 @@
+/* Reset básico para limpiar márgenes del navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ========================== */
+/* NUEVO: html y body al 100% de altura para que el footer pueda pegarse al fondo */
+/* ========================== */
+html,
+body {
+    height: 100%;
+}
+
+/* ========================== */
+/* NUEVO: Convertimos body en un contenedor flex en columna */
+/* Esto empuja el footer hacia abajo aunque haya poco contenido */
+/* ========================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ocupa al menos toda la pantalla */
+}
+
+/* Estilos del Header/Navbar */
+.header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 0 1.5rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #3498db;
+}
+
+/* Estilos del Menú Hamburguesa (Oculto por defecto) */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: white;
+    transition: 0.3s;
+}
+
+/* Responsividad: Pantallas móviles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    /* Transformamos el menú en una columna lateral o desplegable */
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: #2c3e50;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+}
+
+
+/* ================================================ */
+/* NUEVO: Estilos completos del Footer              */
+/* ================================================ */
+
+.footer {
+    background-color: #1a252f; /* Un tono más oscuro que el header para diferenciarlo */
+    color: #bdc3c7;            /* Gris claro para el texto */
+    margin-top: auto;          /* CLAVE: empuja el footer al fondo cuando hay poco contenido */
+}
+
+/* Contenedor principal del footer con layout de 3 columnas */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;           /* Se adapta a pantallas pequeñas */
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem;
+}
+
+/* --- Columna de la marca --- */
+.footer-logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.footer-desc {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    max-width: 220px;
+}
+
+/* --- Columna de enlaces y columna de contacto --- */
+.footer-title {
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.footer-links ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-links a {
+    color: #bdc3c7;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #3498db; /* El mismo azul de hover que el navbar */
+}
+
+.footer-contact p {
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+}
+
+/* --- Barra inferior con copyright --- */
+.footer-bottom {
+    border-top: 1px solid #2c3e50; /* Separador sutil */
+    text-align: center;
+    padding: 1rem 1.5rem;
+    font-size: 0.8rem;
+    color: #7f8c8d;
+}
+
+/* ========================== */
+/* NUEVO: Responsividad del footer en móvil */
+/* ========================== */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;  /* Apila las columnas verticalmente */
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-desc {
+        max-width: 100%;
+    }
+}
