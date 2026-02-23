@@ -13,6 +13,9 @@ body {
     height: 100%;
 }
 
+
+
+
 /* ========================== */
 /* NUEVO: Convertimos body en un contenedor flex en columna */
 /* Esto empuja el footer hacia abajo aunque haya poco contenido */
@@ -21,8 +24,38 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ocupa al menos toda la pantalla */
+    min-height: 60vh; /* Ocupa al menos toda la pantalla */
+    animation:cambiarColor 30s infinite ease-in-out; /* Aplica la animación de cambio de color */
+    transition: color 1s ease; /* Suaviza el cambio de la letra */
 }
+
+@keyframes cambiarColor {
+0%   { background-color: #ff9999; color: #660000; } /* 1. Rojo suave */
+    10%  { background-color: #FF5F6D; color: #ffffff; } /* 2. Coral intenso */
+    20%  { background-color: #FFC371; color: #5d4037; } /* 3. Arena cálida */
+    30%  { background-color: #99ff99; color: #004400; } /* 4. Verde suave */
+    40%  { background-color: #ccd5ae; color: #132a13; } /* 5. Musgo */
+    50%  { background-color: #2193b0; color: #e0f7fa; } /* 6. Azul océano */
+    60%  { background-color: #9999ff; color: #000066; } /* 7. Azul suave */
+    70%  { background-color: #6dd5ed; color: #003366; } /* 8. Cian brillante */
+    80%  { background-color: #e9edc9; color: #432818; } /* 9. Crema/Tierra */
+    90%  { background-color: #d4a373; color: #faedcd; } /* 10. Madera */
+    100% { background-color: #ff9999; color: #660000; } /* Cierre (igual al 0%) */
+    
+}
+
+
+
+
+.textobody {
+    display: flex;   
+    justify-content: center ;
+    min-height: 60vh;   
+    font-size: 2rem;
+}
+
+
+
 
 /* Estilos del Header/Navbar */
 .header {
@@ -181,6 +214,13 @@ body {
     font-size: 0.8rem;
     color: #7f8c8d;
 }
+
+
+
+
+
+
+
 
 /* ========================== */
 /* NUEVO: Responsividad del footer en móvil */
