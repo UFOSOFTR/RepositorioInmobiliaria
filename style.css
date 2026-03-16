@@ -22,7 +22,8 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ocupa al menos toda la pantalla */
+    min-height: 100vh;
+    /* Ocupa al menos toda la pantalla */
 }
 
 /* Estilos del Header/Navbar */
@@ -106,17 +107,17 @@ body {
 }
 
 
+/*Inicio index.html*/
 
-
-.contenedor1{
+.contenedor1 {
     position: relative;
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    
+
 }
 
-.contenedor1 video{
+.contenedor1 video {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -128,32 +129,32 @@ body {
 }
 
 
-.frase1{
+.frase1 {
     position: absolute;
-    top: 69%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
     font-size: 40px;
     font-weight: bold;
     text-align: center;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0, 0, 0, 0.4);
     padding: 15px 25px;
     border-radius: 10px;
 }
 
 
-.frase2{
+.frase2 {
     position: absolute;
-    top: 76%;
+    top: 78%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: rgb(94, 250, 4);
-    font-size: 10px;
-    font-weight: bold;
+    color: rgb(26, 229, 243);
+    font-size: 16px;
+    /*font-weight: bold;*/
     font-style: italic;
     text-align: center;
-    background: rgba(0,0,0,0.10);
+    background: rgba(0, 0, 0, 0.10);
     padding: 15px 25px;
     border-radius: 10px;
 }
@@ -161,9 +162,9 @@ body {
 
 
 
-.frase3{
+.frase3 {
     position: absolute;
-    top: 80%;
+    top: 85%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
@@ -171,38 +172,38 @@ body {
     font-weight: bold;
     font-style: italic;
     text-align: center;
-    background: rgba(0,0,0,0.0);
+    background: rgba(0, 0, 0, 0.0);
     padding: 15px 25px;
     border-radius: 10px;
 }
 
 
-.frase4{
+.frase4 {
     position: absolute;
     top: 40%;
-    left: 10%;
+    left: 12%;
     transform: translate(-50%, -50%);
     color: rgb(27, 27, 27);
-    font-size: 15px;
+    font-size: 18px;
     font-weight: bold;
     text-align: center;
     white-space: pre-line;
-    background: rgba(0,0,0,0.0);
+    background: rgba(0, 0, 0, 0.0);
     padding: 15px 25px;
     border-radius: 10px;
 }
 
-.frase5{
+.frase5 {
     position: absolute;
     top: 40%;
     left: 85%;
     transform: translate(-50%, -50%);
     color: rgb(27, 27, 27);
-    font-size: 15px;
+    font-size: 18px;
     font-weight: bold;
     text-align: center;
     white-space: pre-line;
-    background: rgba(0,0,0,0.0);
+    background: rgba(0, 0, 0, 0.0);
     padding: 15px 25px;
     border-radius: 10px;
 }
@@ -213,7 +214,7 @@ body {
 
 
 
-.contenedor11{
+.contenedor11 {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -223,13 +224,14 @@ body {
     align-items: center;
 }
 
-.contenedor11 video{
-    width: 500px;   /* tamaño del video */
+.contenedor11 video {
+    width: 500px;
+    /* tamaño del video */
     height: auto;
     border-radius: 10px;
 }
 
-.frase11{
+.frase11 {
     position: absolute;
     top: 20%;
     color: white;
@@ -238,19 +240,121 @@ body {
     text-align: center;
 }
 
+/*Final index.html*/
+
+/*Inicio servicios.html*/
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+    padding: 0px 30px;
+}
 
 
 
+.izquierda {
+
+    width: 450px;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+    text-align: justify;
+    font-family: Arial;
+}
+
+.derecha{
+
+    width: 450px;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+    text-align: justify;
+    font-family: Arial;
+}
+
+.derecha {
+    background-color: lightgreen;
+    text-align: center;
+}
 
 
 
+.izquierda, .derecha{
+    width: 50%;
+}
+
+
+.card{
+    width: 200px;
+    height: 120px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.izquierda h2{
+    text-align: center;
+}
+
+.izquierda h3{
+    margin-top: 20px;
+}
+
+.codigo{
+    background: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: monospace;
+}
+
+
+.comandos-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px; /* espacio entre columnas */
+    margin: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.columna{
+    width: 48%; /* casi la mitad de la página */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    text-align:left
+}
+
+.columna h3{
+    text-align: center;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.columna ul{
+    list-style-type: disc;
+    padding-left: 20px;
+    line-height: 1.6;
+}
+
+.columna li b{
+    color: #2c3e50;
+}
 
 
 
-
-
-
-
+/*Final index.html*/
 
 
 
@@ -261,9 +365,12 @@ body {
 /* ================================================ */
 
 .footer {
-    background-color: #1a252f; /* Un tono más oscuro que el header para diferenciarlo */
-    color: #bdc3c7;            /* Gris claro para el texto */
-    margin-top: auto;          /* CLAVE: empuja el footer al fondo cuando hay poco contenido */
+    background-color: #1a252f;
+    /* Un tono más oscuro que el header para diferenciarlo */
+    color: #bdc3c7;
+    /* Gris claro para el texto */
+    margin-top: auto;
+    /* CLAVE: empuja el footer al fondo cuando hay poco contenido */
 }
 
 /* Contenedor principal del footer con layout de 3 columnas */
@@ -271,7 +378,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    flex-wrap: wrap;           /* Se adapta a pantallas pequeñas */
+    flex-wrap: wrap;
+    /* Se adapta a pantallas pequeñas */
     gap: 2rem;
     max-width: 1100px;
     margin: 0 auto;
@@ -316,7 +424,8 @@ body {
 }
 
 .footer-links a:hover {
-    color: #3498db; /* El mismo azul de hover que el navbar */
+    color: #3498db;
+    /* El mismo azul de hover que el navbar */
 }
 
 .footer-contact p {
@@ -326,7 +435,8 @@ body {
 
 /* --- Barra inferior con copyright --- */
 .footer-bottom {
-    border-top: 1px solid #2c3e50; /* Separador sutil */
+    border-top: 1px solid #2c3e50;
+    /* Separador sutil */
     text-align: center;
     padding: 1rem 1.5rem;
     font-size: 0.8rem;
@@ -338,7 +448,8 @@ body {
 /* ========================== */
 @media (max-width: 768px) {
     .footer-container {
-        flex-direction: column;  /* Apila las columnas verticalmente */
+        flex-direction: column;
+        /* Apila las columnas verticalmente */
         align-items: center;
         text-align: center;
     }
